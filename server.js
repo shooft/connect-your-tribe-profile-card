@@ -8,6 +8,10 @@ import fetchJson from './helpers/fetch-json.js'
 const data = await fetchJson('https://fdnd.directus.app/items/person')
 // console.log(data); // uncomment om de opgehaalde data te checken
 
+// decapsulate
+// const {data} = await fetchJson('https://fdnd.directus.app/items/person')
+
+
 // Maak een nieuwe express app aan
 const app = express()
 
