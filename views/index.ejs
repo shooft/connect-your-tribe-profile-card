@@ -1,14 +1,15 @@
 <%- include('./partials/head') %>
+<!-- <%- include('./partials/nav') %> -->
 
-<article>
-  <header>
-    <h1>Hallo</h1>
-    <p>mijn naam is</p>
-  </header>
+  <p><%= data.name %> <%= data.prefix %> <%= data.surname %></p>
 
-  <p><%= data.name %></p>
-
-  <footer></footer>
-</article>
+  <ul>
+    <% data.forEach(person => { %>
+      <!-- <li>
+        <%= person.name %>
+      </li> -->
+      <%- include('./partials/person', {person} ) %>
+    <% }); %>
+  </ul>
 
 <%- include('./partials/foot') %>
